@@ -5,6 +5,12 @@ on:
     branches: [ "main" ] # 当推送到 main 分支时触发
   workflow_dispatch:
 
+# 👇 重点：添加这一段配置
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
