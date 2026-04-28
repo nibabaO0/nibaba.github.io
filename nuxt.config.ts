@@ -96,10 +96,11 @@ export default defineNuxtConfig({
 
   // Nitro服务端配置 - 删除了 preset 或注释掉
   nitro: {
+    preset: 'static', 
     // preset: 'node-server', // ❌ 注释掉，GitHub Pages 不需要 Node 服务
-    experimental: {
-      websocket: true
-    }
+    //experimental: {
+    //  websocket: true
+    //}
   },
 
   // 运行时配置 - 修改了 URL
