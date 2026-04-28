@@ -39,7 +39,9 @@ useHead({
         <!-- 右侧雷达图 -->
         <div class="bg-gradient-to-br from-gray-50 to-blue-50 p-8 rounded-2xl">
           <h3 class="text-xl font-semibold mb-6 text-center">技术栈熟练度</h3>
-          <div id="homeRadarChart" class="w-full h-80"></div>
+          <client-only>
+            <div id="homeRadarChart" class="w-full h-80"></div>
+          </client-only>
         </div>
       </div>
 
