@@ -1,0 +1,115 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  compatibilityDate: '2024-04-27',
+
+  devtools: { enabled: true },
+
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxt/content',
+    '@nuxtjs/seo'
+  ],
+
+  // OG Image 禁用（无实际图片资源）
+  ogImage: {
+    enabled: false
+  },
+
+  // SEO配置
+  site: {
+    url: 'https://your-domain.com',
+    name: 'TechPortfolio - 个人技术博客',
+    description: '专注前端性能优化与AI工程化实践的技术博客',
+    defaultLocale: 'zh-CN',
+    identity: {
+      type: 'Person'
+    }
+  },
+
+  // Sitemap配置
+  sitemap: {
+    autoLastmod: true,
+    cacheMaxAgeSeconds: 3600
+  },
+
+  // 应用配置
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' },
+        { rel: 'preconnect', href: 'https://cdnjs.cloudflare.com' }
+      ],
+      meta: [
+        { name: 'theme-color', content: '#3b82f6' },
+        { name: 'author', content: 'TechPortfolio' },
+        { name: 'robots', content: 'index, follow' },
+        { property: 'og:site_name', content: 'TechPortfolio' },
+        { property: 'og:locale', content: 'zh_CN' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:creator', content: '@TechPortfolio' }
+      ],
+      script: [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'TechPortfolio',
+            jobTitle: '前端工程师 / AI工程化研究员',
+            url: 'https://your-domain.com',
+            sameAs: [
+              'https://github.com/example',
+              'https://linkedin.com/in/example',
+              'https://twitter.com/example'
+            ]
+          })
+        }
+      ]
+    },
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
+
+  // TailwindCSS配置
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
+    configPath: 'tailwind.config.js'
+  },
+
+  // Content配置
+  content: {
+    highlight: {
+      theme: {
+        default: 'github-dark',
+        dark: 'github-dark'
+      },
+      langs: ['javascript', 'typescript', 'vue', 'html', 'css', 'bash', 'json', 'python']
+    },
+    markdown: {
+      toc: { depth: 3, searchDepth: 3 }
+    }
+  },
+
+  // Nitro服务端配置
+  nitro: {
+    preset: 'node-server',
+    experimental: {
+      websocket: true
+    }
+  },
+
+  // 运行时配置
+  runtimeConfig: {
+    public: {
+      siteUrl: 'https://your-domain.com'
+    }
+  },
+
+  // TypeScript配置
+  typescript: {
+    strict: true,
+    typeCheck: false
+  }
+})

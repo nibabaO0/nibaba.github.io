@@ -1,0 +1,32 @@
+{
+  "name": "tech-portfolio-blog",
+  "version": "1.0.0",
+  "description": "个人技术博客 - 展示前端性能优化与AI工程化实践",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@nuxt/content": "^2.12.1",
+    "echarts": "^5.5.0",
+    "node-emoji": "^2.1.3",
+    "vue-echarts": "^6.6.9"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^1.1.5",
+    "@nuxtjs/color-mode": "^4.0.0",
+    "@nuxtjs/seo": "^2.0.0-rc.16",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@types/node": "^20.11.30",
+    "nuxt": "^3.11.1",
+    "typescript": "^5.4.3",
+    "vue-tsc": "^2.0.7"
+  }
+}
