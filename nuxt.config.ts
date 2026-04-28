@@ -33,6 +33,8 @@ export default defineNuxtConfig({
 
   // 应用配置
   app: {
+    baseURL: '/', // ⚠️ 必须是斜杠，不能是 '/nibaba00.github.io/'
+    buildAssetsDir: '/_nuxt/', // ⚠️ 确保资源目录也是根路径
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
