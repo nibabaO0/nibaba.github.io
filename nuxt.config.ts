@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-27',
-
   devtools: { enabled: true },
 
   modules: [
@@ -10,14 +9,14 @@ export default defineNuxtConfig({
     '@nuxtjs/seo'
   ],
 
-  // OG Image 禁用（无实际图片资源）
+  // OG Image 禁用
   ogImage: {
     enabled: false
   },
 
-  // SEO配置
+  // SEO配置 - 修改了 URL
   site: {
-    url: 'https://your-domain.com',
+    url: 'https://nibaba00.github.io', // ✅ 修改为你的实际域名
     name: 'TechPortfolio - 个人技术博客',
     description: '专注前端性能优化与AI工程化实践的技术博客',
     defaultLocale: 'zh-CN',
@@ -59,11 +58,12 @@ export default defineNuxtConfig({
             '@type': 'Person',
             name: 'TechPortfolio',
             jobTitle: '前端工程师 / AI工程化研究员',
-            url: 'https://your-domain.com',
+            url: 'https://nibaba00.github.io', // ✅ 修改为实际域名
             sameAs: [
-              'https://github.com/example',
-              'https://linkedin.com/in/example',
-              'https://twitter.com/example'
+              // ✅ 请将下方的 example 替换为你的真实账号
+              'https://github.com/nibaba00', 
+              'https://linkedin.com/in/your-real-profile', 
+              'https://twitter.com/your_real_handle'
             ]
           })
         }
@@ -92,18 +92,18 @@ export default defineNuxtConfig({
     }
   },
 
-  // Nitro服务端配置
+  // Nitro服务端配置 - 删除了 preset 或注释掉
   nitro: {
-    preset: 'node-server',
+    // preset: 'node-server', // ❌ 注释掉，GitHub Pages 不需要 Node 服务
     experimental: {
       websocket: true
     }
   },
 
-  // 运行时配置
+  // 运行时配置 - 修改了 URL
   runtimeConfig: {
     public: {
-      siteUrl: 'https://your-domain.com'
+      siteUrl: 'https://nibaba00.github.io' // ✅ 修改为实际域名
     }
   },
 
