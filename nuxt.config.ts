@@ -16,7 +16,7 @@ export default defineNuxtConfig({
 
   // SEO配置 - 修改了 URL
   site: {
-    url: 'https://nibaba00.github.io', // ✅ 修改为你的实际域名
+    url: 'https://nibaba00.github.io/nibaba.github.io', // ✅ 修改为你的实际域名
     name: 'TechPortfolio - 个人技术博客',
     description: '专注前端性能优化与AI工程化实践的技术博客',
     defaultLocale: 'zh-CN',
@@ -33,8 +33,8 @@ export default defineNuxtConfig({
 
   // 应用配置
   app: {
-    baseURL: '/', // ⚠️ 必须是斜杠，不能是 '/nibaba00.github.io/'
-    buildAssetsDir: '/_nuxt/', // ⚠️ 确保资源目录也是根路径
+    baseURL: '/nibaba.github.io/', // ⚠️ 必须是斜杠，不能是 '/nibaba00.github.io/'
+    buildAssetsDir: '/nibaba.github.io/_nuxt/', // ⚠️ 确保资源目录也是根路径
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
